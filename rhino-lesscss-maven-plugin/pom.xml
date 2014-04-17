@@ -3,10 +3,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>rhino-lesscss-maven-plugin</artifactId>
 	<packaging>maven-plugin</packaging>
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License (LGPL) version 2.1</name>
+			<url>http://www.gnu.org/licenses/lgpl-2.1.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 	<parent>
-		<groupId>ch.sventschui</groupId>
+		<groupId>ch.sventschui.rhino-lesscss-maven-plugin</groupId>
 		<artifactId>rhino-lesscss-maven</artifactId>
-		<version>1.7.0-2-SNAPSHOT</version>
+		<version>1.0-alpha-1-SNAPSHOT</version>
 	</parent>
 	<dependencies>
 		<dependency>

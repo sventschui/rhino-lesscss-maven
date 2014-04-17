@@ -1,14 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ch.sventschui</groupId>
+	<groupId>ch.sventschui.rhino-lesscss-maven-plugin</groupId>
 	<artifactId>rhino-lesscss-maven</artifactId>
+	<version>1.0-alpha-1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<version>1.7.0-2-SNAPSHOT</version>
 	<description>
 		Tiny Maven plugin to compile LESS files to CSS
 	</description>
-	<url>https://github.com/sventschui/rhino-lesscss-maven-pluging</url>
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License (LGPL) version 2.1</name>
+			<url>http://www.gnu.org/licenses/lgpl-2.1.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<url>https://github.com/sventschui/rhino-lesscss-maven</url>
 	<modules>
 		<module>rhino-lesscss-maven-plugin</module>
 		<module>rhino-lesscss-maven-plugin-inttest</module>
@@ -23,7 +30,7 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>ch.sventschui</groupId>
+				<groupId>${project.groupId}</groupId>
 				<artifactId>rhino-lesscss-maven-plugin</artifactId>
 				<version>${project.version}</version>
 			</dependency>
