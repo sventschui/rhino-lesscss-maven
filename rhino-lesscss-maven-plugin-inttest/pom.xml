@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>rhino-lesscss-maven-plugin-inttest</artifactId>
+	<parent>
+		<groupId>ch.sventschui</groupId>
+		<artifactId>rhino-lesscss-maven</artifactId>
+		<version>1.7.0-2-SNAPSHOT</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>ch.sventschui</groupId>
+			<artifactId>rhino-lesscss-maven-plugin</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>rhino-lesscss-maven-plugin</artifactId>
+				<version>${project.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>lesscss</goal>
+						</goals>
+						<configuration>
+							<directories>
+								<directory>
+									<input>
+										<directory>${basedir}/src/test/resources/source/</directory>
+										<includes>
+											<include>*.less</include>
+										</includes>
+									</input> 
+									<output>${project.build.directory}/</output>
+								</directory>
+							</directories>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
