@@ -66,15 +66,15 @@ public class LessCssMojo extends AbstractMojo {
             File inBase = new File(fileSet.getDirectory());
             File outBase = directory.getOutput();
 
-            for (String file : fileSetManager.getIncludedFiles(fileSet)) {
+            for (String filename : fileSetManager.getIncludedFiles(fileSet)) {
 
-                File input = new File(inBase, file);
+                File input = new File(inBase, filename);
                 
-                if(buildContext != null && !buildContext.hasDelta(file)) {
+                if(buildContext != null && !buildContext.hasDelta(filename)) {
                     continue;
                 }
 
-                File output = new File(outBase, file);
+                File output = new File(outBase, filename.replaceAll("\\.less$", ".css"));
 
                 try {
                     
